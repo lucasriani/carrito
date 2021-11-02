@@ -17,10 +17,10 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 
 const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
+position: 'relative',
+borderRadius: theme.shape.borderRadius,
+backgroundColor: alpha(theme.palette.common.white, 0.15),
+'&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   marginRight: theme.spacing(2),
@@ -173,7 +173,7 @@ export default function PrimarySearchAppBar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            DikurBa
           </Typography>
           <Search>
             <SearchIconWrapper>
@@ -231,3 +231,5 @@ export default function PrimarySearchAppBar() {
     </Box>
   );
 }
+
+
