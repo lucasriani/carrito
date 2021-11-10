@@ -1,13 +1,14 @@
 
 import './App.css';
-import NavBar from './components/navbar/navbar';
-import TittleComponent from './components/tittle/title';
+import ItemListContainer from './components/ItemListContainer';
+import NavBar from './components/NavBar';
+
 
 function App() {
   return (
     <div className="App">
-    <NavBar/>
-    <TittleComponent />
+        <NavBar />
+        <ItemListContainer greeting ="BIENVENIDOS A DIKUR BAIRES"/>
     </div>
   );
 }

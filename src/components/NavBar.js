@@ -13,15 +13,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
-import CartWidget from '@mui/icons-material/ShoppingCart';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const Search = styled('div')(({ theme }) => ({
-position: 'relative',
-borderRadius: theme.shape.borderRadius,
-backgroundColor: alpha(theme.palette.common.white, 0.15),
-'&:hover': {
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   marginRight: theme.spacing(2),
@@ -77,9 +75,7 @@ export default function PrimarySearchAppBar() {
     handleMobileMenuClose();
   };
 
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
+  
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
@@ -126,21 +122,32 @@ export default function PrimarySearchAppBar() {
             <MailIcon />
           </Badge>
         </IconButton>
-        <p>Messages</p>
+        
       </MenuItem>
       <MenuItem>
         <IconButton
           size="large"
-          aria-label="show 17 in a cart"
+          aria-label="show 17 new notifications"
           color="inherit"
         >
-          <Badge badgeContent={17} color="error">
-            <CartWidget />
+          <Badge badgeContent={5} color="error">
+            <ShoppingCartIcon />
           </Badge>
         </IconButton>
-        <p>Cart</p>
+        <p>Notifications</p>
       </MenuItem>
-      
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <IconButton
+          size="large"
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <AccountCircle />
+        </IconButton>
+        <p>Profile</p>
+      </MenuItem>
     </Menu>
   );
 
@@ -163,44 +170,33 @@ export default function PrimarySearchAppBar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            DikurBa
+            DikurBA
           </Typography>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Buscar..."
+              placeholder="Buscar…"
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             
-            <CartWidget />
             <IconButton
               size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
+              aria-label="Un articulo en el carrito"
               color="inherit"
             >
-              <AccountCircle />
+              <Badge badgeContent={1} color="error">
+                <ShoppingCartIcon />
+              </Badge>
             </IconButton>
+            
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
+            
           </Box>
         </Toolbar>
       </AppBar>
