@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Button, List } from "@mui/material";
 
 const ItemCount = ({stock, initial}) => {
 
@@ -22,7 +23,7 @@ const ItemCount = ({stock, initial}) => {
 
     const onAdd = () =>{
         const mensaje = `Agregaste ${count} producto`;
-        count == 1 ? alert(mensaje) : alert (`${mensaje}s`)
+        count === 1 ? alert(mensaje) : alert (`${mensaje}s`)
 
     }
     return (
@@ -32,9 +33,12 @@ const ItemCount = ({stock, initial}) => {
             <h3>{count}</h3>
             <button onClick={quitarItem}>-</button>
         </div><br></br>
-        <button onClick={onAdd}>Agregar al carrito</button>
+        <Button onClick={onAdd} variant="contained" disableElevation> Agregar al carrito</Button>
         
+
         </>
+
+        
     );
 };
 

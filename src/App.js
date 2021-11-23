@@ -9,6 +9,7 @@ function App() {
     <div className="App">
         <NavBar />
         <ItemListContainer greeting ="BIENVENIDOS A DIKUR BAIRES"/>
+        
     </div>
   );
 }
