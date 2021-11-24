@@ -1,25 +1,13 @@
-import { useEffect, useState } from "react";
-import { Button, List } from "@mui/material";
+const Item = ({description, price, stock, title}) =>{
 
-const Item = () => {
-    const [users, setUsers] = useState ([]);
+    return(
+        <div>
+            <h3>Titulo: {title}</h3>
+            <h2>Precio: {price}</h2>
+            <p>Descripcion: {description}</p>
+            <p>Stock: {stock}</p>
+        </div>
+    )
+}
 
-    useEffect(() => {
-        const users = [
-            {id:1, name: "Mesa"},
-            {id:2, name: "Velador"},
-            {id:3, name: "Lampara techo"}
-        ]
-        setUsers(users);
-    },[]);
-
-    
-        return <ul>
-            {users.map(u => <li  key={u.id}>{u.name}</li>)}
-        </ul>
-        
-        
-    ;
-};
-
-export default Item;
+export default Item
