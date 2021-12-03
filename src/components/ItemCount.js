@@ -1,4 +1,4 @@
-import { useState } from "react";
+/*import { useState } from "react";
 import { Button} from "@mui/material";
 
 const ItemCount = ({stock, initial}) => {
@@ -42,4 +42,4 @@ const ItemCount = ({stock, initial}) => {
     );
 };
 
-export default ItemCount;
+export default ItemCount;*/

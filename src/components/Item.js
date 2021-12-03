@@ -8,6 +8,7 @@ const Item = ({description, price, stock, title, id}) =>{
             <h2>Precio: {price}</h2>
             <p>Descripcion: {description}</p>
             <p>Stock: {stock}</p>
+            
         </div>
         </Link>
     )

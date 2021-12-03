@@ -13,7 +13,7 @@ const data = [
         "title":"Velador",
         "descripcion":"este es el segundo  producto",
         "categoria": "mesa",
-        "price": "$300",
+        "price": "$3000",
         "stock": "3"
     },
 

@@ -13,7 +13,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element ={<ItemListContainer greeting ="BIENVENIDOS A DIKUR BAIRES" />} />
-          <Route path="item/:id" element ={<ItemDetailContainer />} />
+          <Route path="item/:id" element ={<ItemDetailContainer stock={1} initial={1} />} />
         </Routes>
 
         

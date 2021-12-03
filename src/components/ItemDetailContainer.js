@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
             setItem(res.find((prod) => prod.id === parseInt(id)))
         });
     }, [id]);
-    return <ItemDetail item={item} />;
+    return <ItemDetail stock={5} initial={1} item={item} />;
 };
 
 export default ItemDetailContainer;
