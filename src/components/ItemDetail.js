@@ -2,29 +2,30 @@ import { useState } from "react";
 import { Button} from "@mui/material";
 
 const ItemDetail = (props) => {
-    const { title, price, descripcion, stock, initial} = props.item;
+    const { title, price, descripcion, stock,initial} = props.item;
     
     
-    const [count, setCount] = useState(initial)
+    const [contador, setContador] = useState(1,initial)
+    console.log(contador)
 
     const agregarItem = () =>{
-        const newValue = count + 1;
+        const newValue = contador + 1;
         if(newValue <= stock) {
-            setCount (newValue)
+            setContador(newValue);
         }
     }
 
     const quitarItem = () =>{
-        const newValue = count - 1;
-        if (newValue >= initial){
-            setCount (newValue)
+        const newValue = contador - 1;
+        if(newValue >= initial) {
+            setContador(newValue);
         }
         
     }
 
     const onAdd = () =>{
-        const mensaje = `Agregaste ${count} producto`;
-        count === 1 ? alert(mensaje) : alert (`${mensaje}s`)
+        const mensaje = `Agregaste ${contador} producto`;
+        contador === 1 ? alert(mensaje) : alert (`${mensaje}s`)
 
     }
 
@@ -37,7 +38,7 @@ const ItemDetail = (props) => {
             <p>{descripcion}</p>
             <p>{stock}</p>
             <button onClick={agregarItem}>+</button><br/>
-            <h3>{props.stock}</h3>
+            <h3>{contador}</h3>
             <button onClick={quitarItem}>-</button><br/><br/>
             <Button onClick={onAdd} variant="contained" disableElevation> Agregar al carrito</Button>
             
