@@ -37,7 +37,7 @@ const ItemDetail = (props) => {
             <p>{descripcion}</p>
             <p>{stock}</p>
             <button onClick={agregarItem}>+</button><br/>
-            <h3>{count}</h3>
+            <h3>{props.stock}</h3>
             <button onClick={quitarItem}>-</button><br/><br/>
             <Button onClick={onAdd} variant="contained" disableElevation> Agregar al carrito</Button>
             

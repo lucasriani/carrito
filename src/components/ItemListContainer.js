@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
-import ItemCount from "./ItemCount";
-//import getProducts from "./services/handMadePromise";
+
+//import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import getProducts from "./services/handMadePromise";
 
@@ -40,6 +40,7 @@ const ItemListContainer = ({greeting}) => {
         <ItemList products = {products}/>
         
         </>
+        
     )
 }
 

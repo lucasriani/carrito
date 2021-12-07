@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router";
 import getProducts from "../components/services/handMadePromise"
+
 import ItemDetail from "./ItemDetail";
 
 
@@ -19,7 +20,10 @@ const ItemDetailContainer = () => {
             setItem(res.find((prod) => prod.id === parseInt(id)))
         });
     }, [id]);
-    return <ItemDetail stock={5} initial={1} item={item} />;
+    return <>
+            <ItemDetail  initial={1} item={item} />
+            
+            </>
 };
 
 export default ItemDetailContainer;

@@ -12,7 +12,7 @@ const ItemList = ({products}) => {
                 description = {product.descripcion}
                 category = {product.categoria}
                 price = {product.price}
-                stock = {product.stock}
+                stock = {product.cantidad}
                 title = {product.title}
                 id={product.id}
                 />
